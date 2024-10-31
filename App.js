@@ -1,6 +1,7 @@
 import { authenticate, getAccessToken, fetchFollowerCount } from './src/auth.js';
 import FollowerGoal from './src/FollowerGoal.js';
 import express from 'express';
+import WebSocket from 'ws';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -46,9 +47,19 @@ app.get('/api/followers', async (req, res) => {
     }
 });
 
+// API endpoint to get the configured follower goal
+app.get('/api/followersGoal', (req, res) => {
+    //note for a JSON response later
+    /*const config = {
+        goalFollowers: process.env.FOLLOWER_GOAL // Another example if needed
+    };
+    res.json(config);*/
+    res.json({ goalFollowers });
+});
+
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Express server is running on http://localhost:${PORT}`);
 });
 
 (async () => {

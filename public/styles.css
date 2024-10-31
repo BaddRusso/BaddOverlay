@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* Container for the follower goal */
+.follower-goal-container {
+    width: 100%;
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    position: relative; /* For absolute positioning */
+    height: 30px; /* Height of the bar */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+/* Follower goal progress */
+.follower-goal-progress {
+    height: 100%; /* Full height of the container */
+    background-color: #fffc30; /* Color of the progress bar */
+    transition: width 0.5s ease; /* Smooth transition for width changes */
+    width: 0; /* Initial width */
+}
+
+/* Text displaying the follower count */
+.follower-goal-text {
+    position: absolute; /* Position text over the progress bar */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+}

@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Follower Goal Overlay</title>
+    <link rel="stylesheet" href="styles.css">
     <script defer src="./script.js" type="module"></script>
 </head>
 <body>
     <!-- This is where the follower goal bar will render -->
-    <div id="follower-goal-container"></div>
+    <div id="follower-goal-container">
+        <div class="follower-goal-progress" id="followerGoalProgress"></div>
+        <div class="follower-goal-text" id="followerGoalText">0 / 100</div>    
+    </div>
 </body>
 </html>
